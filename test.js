@@ -26,21 +26,27 @@ test('should be able to convert a dataurl to a blob', function(t){
 	var name = Date.now() +'.png';
 	var imageUrl = 'https://s3.amazonaws.com/no-rules-666/'+name;
 
-	request.put(imageUrl)
-		.send(blob)
-		.end(function(err, res){
-			t.notOk(err, 'no upload error');
-			t.equal(res.status, 200, 'upload all good.');
-			
-			request.get(imageUrl)
+		var reader = new FileReader();
+		reader.addEventListener("loadend", function(e) {
+			request.put(imageUrl)
+				.set('Content-type', 'image/png')
+				.send(new Int8Array(e.target.result))
 				.end(function(err, res){
-					t.notOk(err, 'no download error');
-					t.equal(res.status, 200, 'download all good');
-					t.equal(res.text.length, 3472, 'the download is not empty');
+					t.notOk(err, 'no upload error');
+					t.equal(res.status, 200, 'upload all good.');
+					
+
+					request.get(imageUrl)
+						.end(function(err, res){
+							t.notOk(err, 'no download error');
+							t.equal(res.status, 200, 'download all good');
+							t.equal(res.text.length, 3472, 'the download is not empty');
+
+						});
 
 				});
-
 		});
+		reader.readAsArrayBuffer(blob);
 
 
 });
