@@ -4,7 +4,5 @@ browsers:
     version: latest
   - name: chrome
     version: latest
-  - name: ipad
-    version: 7.1..latest
   - name: iphone
-    version: 7.1..latest
+    version: latest
