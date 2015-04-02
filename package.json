@@ -4,7 +4,7 @@
   "description": "Blob.js",
   "main": "Blob.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"test": "zuul -- test.js"
   },
   "repository": {
     "type": "git",
@@ -14,25 +14,9 @@
     "url": "https://github.com/chevett/Blob.js/issues"
   },
   "homepage": "https://github.com/chevett/Blob.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "tape": "^3.5.0"
-  },
-  "scripts": {
-	  "test": "tape test.js"
-  },
-  "testling": {
-		"files": "test.js",
-		"browsers": [
-		  "ie/6..latest",
-		  "chrome/22..latest",
-		  "firefox/16..latest",
-		  "safari/latest",
-		  "opera/11.0..latest",
-		  "iphone/6",
-		  "ipad/6",
-		  "android-browser/latest"
-		]
-	  }
+    "tape": "^3.5.0",
+    "zuul": "^2.1.1"
+  }
 }
