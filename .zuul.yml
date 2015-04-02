@@ -1,8 +1,8 @@
 ui: tape
 browsers:
-  - name: firefox
-    version: latest
   - name: chrome
     version: latest
   - name: iphone
     version: latest
+  - name: android
+    version: [4.1,4.3,4.4]
