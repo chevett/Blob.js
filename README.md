@@ -1,7 +1,7 @@
 Blob.js
 ==============
 [![browser support](https://travis-ci.org/chevett/Blob.js.svg)
-](https://travis-ci.org/chevett/Blob.js.svg)
+](https://travis-ci.org/chevett/Blob.js)
 
 Blob.js implements the W3C [`Blob`][1] interface in browsers that do
 not natively support it.
