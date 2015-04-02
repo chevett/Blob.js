@@ -21,10 +21,6 @@ test('should be able to convert a dataurl to a blob', function(t){
 	// console.dir(blob);
 	// t.equal(blob.size, 3585, 'the cat pic is 3585 bytes, so the blob should be 3585 bytes');
 	// t.equal(blob.type, 'image/png', 'the cat pic is a png, the blob should be a png');
-	console.dir(array);
-	debugger
-
-
 
 	var name = Date.now() +'.png';
 	var imageUrl = 'https://s3.amazonaws.com/no-rules-666/'+name;
