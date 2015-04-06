@@ -7,6 +7,5 @@ module.exports = function(dataURI){
         array.push(binary.charCodeAt(i));
     }
 
-	return array;
-	//return new Uint8Array(array);
+	return new Uint8Array(array);
 };
